@@ -6,7 +6,7 @@
 }
 
 body {
-	background: #f6f5f7;
+	background: linear-gradient(#e66465, #9198e5);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -161,8 +161,8 @@ input {
 
 .overlay {
 	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: -webkit-linear-gradient(to right, #9198e5, #FF416C);
+	background: linear-gradient(to right, #9198e5, #FF416C);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
