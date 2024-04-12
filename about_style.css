@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+  --primary-color: #ee6e73;
+  --secondary-color: #ffffff;
+}
+
+body {
+  background-image: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.profile-card {
+  border-radius: 5px;
+  cursor: pointer;
+  width: 350px;
+  height: 450px;
+  background: var(--secondary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all .2s ease-in .1s;
+}
+
+.profile-card--image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 25%);
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-repeat: no-repeat;
+  filter: grayscale(100%);
+  background-size: cover;
+  background-position: center;
+  transition: all .2s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+
+.profile-card--info {
+  font-family: 'Poppins', sans-serif;
+  transform: translateY(250px);
+  display: block;
+  text-align: center;
+  color: var(--primary-color);
+  transition: all .2s ease-in;
+}
+
+.profile-card--info .name {
+  font-size: 24px;
+  transition: all .2s cubic-bezier(0.5, -0.5, 0.5, 1.5);
+}
+
+.profile-card--info .links {
+  display: block;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: all .1s ease-in;
+}
+
+.profile-card--info .links a {
+  font-size: 30px;
+  padding: 0 10px;
+  outline: none;
+  color: var(--secondary-color); /* Assuming you want them white, adjust if needed */
+}
+
+.profile-card--info .info {
+  line-height: 23px;
+  padding: 5px;
+  transform: translateY(-35px);
+  display: none;
+  transition: all .1s ease-in;
+}
+
+.profile-card:hover {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.profile-card:hover .profile-card--image {
+  transform: translate(-50%, -20%) scale(1.2);
+  filter: grayscale(0%);
+}
+
+.profile-card:hover .profile-card--info {
+  transform: translateY(190px);
+  color: var(--secondary-color);
+}
+
+.profile-card:hover .profile-card--info .name {
+  transform: translateY(-20px);
+}
+
+.profile-card:hover .profile-card--info .links {
+  visibility: visible;
+  transform: translateY(-30px);
+}
+
+.profile-card:hover .profile-card--info .links a {
+  color: var(--secondary-color);
+}
+
+.profile-card:hover .profile-card--info .info {
+  display: inline-block;
+  text-decoration-color: #434343;
+  transform: translateY(-40px);
+}
