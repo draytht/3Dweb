@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     list-style: none;
     text-decoration: none;
 }
@@ -37,12 +38,12 @@ header {
     display: flex;
 }
 
-.navigation a {
+.navigation a{
     color: white;
     margin-left: 60px;
     font-size: 15px;
     font-weight: 600;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid transparent;
     transition: all .55s ease;
 }
 
@@ -52,7 +53,7 @@ header {
 
 #menu_icon {
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     z-index: 10001;
     cursor: pointer;
     display: none;
@@ -92,4 +93,198 @@ footer a {
     background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     position: relative;
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+section{
+    padding: 0 19%;
+}
+
+.hero-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 40px;
+}
+.hero-text h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+    line-height: 1; 
+    color: white;
+    margin:  0 0 45px;
+}
+
+.hero-text h4{
+    font-size: 18px;
+    font-weight: 600;
+    COLOR: WHITE;
+    MARGIN-BOTTOM: 10px;
+}
+.hero-text p{
+    color: white;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+}
+
+.hero-img{
+    width: 700px;
+    height: auto;
+}
+.hero-text a{
+    display: inline-block;
+    color: white;
+    background: #FF512F;
+    border: 1px solid transparent;
+    padding: 12px 30px;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;   
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+}
+
+.hero-text a:hover{
+    background: transparent;
+    border: 1px solid white;
+    transform: translateX(8px);
+}
+
+.hero-text a.ctaa{
+    background: transparent;
+    border: 1px solid white;
+    margin-left: 20px;
+}
+.hero-text a.ctaa i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.icons{
+    position: absolute;
+    top: 50%;
+    padding: 0 9%;
+    transform: translateY(-50%);
+}
+.icons i{
+    display: block;
+    margin: 26px 0;
+    font-size: 24px;
+    color: white;
+    transition: all .50s ease;
+}
+.icons i:hover{
+    color: #FF512F;
+    transform: translateY(-5px);
+}
+.scroll-down{
+    position:absolute;
+    bottom: 6%;
+    right: 9%;
+}
+.scroll-down i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: white;
+    background: #FF512F;
+    border-radius: 30px;
+    transition: all .50s ease;
+}
+.scroll-down i:hover{
+    transform: translateY(-5px);
+}
+@media (max-width: 1535px){
+    header{
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .icons{
+        padding: 0 3%;
+        transition: .2s;
+    }
+    .scroll-down{
+        right: 3%;
+        transition: .2s;
+    }
+}
+@media (max-width: 1460px){
+    section{
+        padding: 0 12%;
+        transition: .2s;
+    }
+}
+@media (max-width: 1340px){
+    .hero-img img{
+        width: 100%;
+        height: auto;
+    }
+    .hero-text h1{
+        font-size: 75px;
+        margin: 0 0 30px;
+    }
+    .hero-text h5{
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 1195px){
+    section{
+        padding: 0 3% ;
+        transition: .2s;
+    }
+    .hero-text{
+        padding-top: 115px;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 560px;
+        height: auto;
+    }
+    .hero{
+        height: 100%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+    .icons{
+        display: none;
+    }
+    .scroll-down{
+        display: none;
+    }
+}
+@media (max-width: 990px){
+    #menu-icon{
+        display: block;
+    }
+    .navigation{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 300px;
+        height: 40vh; 
+        background: #FF512F ;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+    }
+    .navigation a{
+        margin-left: 0;
+        display: block;
+        margin: 7px 0; 
+    }
+    .navigation.open{
+        right: 0;
+    }
+}
+@media (max-width: 680px){
+    .hero-img img{
+        width: 100%;
+        height: auto;
+    }
 }
